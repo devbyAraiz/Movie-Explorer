@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Explorer</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">
+            <i id="backBtn" class="fa-solid fa-arrow-left"></i>
+            🎬 MovieExplorer
+        </h2>
+
+        <form id="form">
+            <div class="search-wrap">
+                <input type="text" id="search" placeholder="Search movies..." />
+                <span class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+            </div>
+        </form>
+
+        <div class="filters">
+            <select id="industry">
+                <option value="">All</option>
+                <option value="hollywood">Hollywood</option>
+                <option value="bollywood">Bollywood</option>
+                <option value="lollywood">Lollywood</option>
+            </select>
+
+            <select id="genre">
+                <option value="">All Genres</option>
+            </select>
+        </div>
+    </header>
+
+    <main id="main"></main>
+    <div id="pagination" class="pagination"></div>
+
+    <div class="modal" id="trailerModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe id="trailerFrame" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <div class="alert-modal" id="alertModal">
+        <div class="alert-box">
+            <div class="alert-icon">
+                <i class="fa-solid fa-circle-info"></i>
+            </div>
+            <p id="alertText">Message here</p>
+            <button id="alertOk">OK</button>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
